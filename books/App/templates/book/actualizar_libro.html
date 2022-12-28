@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form_login">
+    <div class="container-form">
+        <form method="POST" action="{{url_for('main.updateLibro',id=book.id)}}">
+            <h1>Actualizar libro</h1>
+            <div class="form-group inputForm">
+                <label>Nombre de libro</label>
+                <input type="text" class="form-control" name="name" aria-describedby="emailHelp"
+                   value="{{book.name}}">
+            </div>
+            <div class="form-group inputForm">
+                <label>Calidad de libro</label>
+                <input type="text" class="form-control" name="quality" id="exampleInputPassword1"
+                   value="{{book.quality}}">
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="notification">
+                {{ messages[0] }}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <button type="submit" class="btn btn-danger">Ingresar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

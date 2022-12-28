@@ -1,0 +1,196 @@
+body {
+    background-image: url('../img/img-books.webp');
+}
+
+.form_login {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-flow: row;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-form {
+
+    width: 40%;
+    background-color: rgba(255, 255, 255,0.9);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 1px solid red; 
+
+}
+.inputForm{
+    margin: 5px;
+}
+
+h1{
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    
+}
+
+.btn{
+    
+    margin:5px auto;
+    background-color: red !important;
+}
+.btn-update{
+    
+    margin:5px auto;
+    background-color: blue !important;
+}
+
+.book-table{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255,0.9);
+    margin-top: 20px;
+    padding: 5%;
+    border-left: 3px solid red; 
+    border-right: 2px solid red; 
+
+}
+
+label{
+    font-size: 2em;
+}
+
+.table{
+    margin: 20px auto ;
+    
+}
+th{
+    font-family: "Sofia", sans-serif;
+}
+
+.table td {
+    margin: 0 auto
+}
+nav.navbar.navbar-expand-lg.nav.navbar-light.bg-light{
+    font-family: "Sora", sans-serif;
+}
+nav.navbar.navbar-expand-lg.nav.navbar-light.bg-light {
+    padding: 8px 5%;
+    font-size: 1em;
+}
+.nav-ul{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav-item{
+    
+    margin: 0 15px;
+}
+
+.nav-item:hover{
+    padding: -1px;
+    border-bottom: 1px solid red;
+}
+a.navbar-brand {
+    font-family: 'Tangerine', serif;
+    font-size: 3.5em;
+    padding: 0px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.notification{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
