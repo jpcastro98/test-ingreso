@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form_login">
+    <div class="container-form">
+        <form method="POST" action="{{url_for('main.registrarLibro')}}">
+            <h1>Registro de libro</h1>
+            <div class="form-group inputForm">
+                <label>Nombre de libro</label>
+                <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Escribe el nombre del libro ">
+            </div>
+            <div class="form-group inputForm">
+                <label>Calidad de libro</label>
+                <input type="text" class="form-control" name="quality" id="exampleInputPassword1"
+                    placeholder="Escribe la calidad del libro">
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="notification">
+                {{ messages[0] }}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <button type="submit" class="btn btn-danger">Ingresar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

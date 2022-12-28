@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="book-table">
+    <div>
+        <h1> Bievenido, aquí podras administrar tus libros. </h1>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="notification">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Calidad</th>
+                    <th scope="col">Actualizar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>
+                        {{book.name}}
+                    </td>
+                    <td>
+                        {{book.quality}}
+                    </td>
+                    <td>
+                        <a href="{{url_for('main.update',id=book.id)}}"><button
+                                class="btn  btn-update  btn-primary">Actualizar</button></a>
+                    </td>
+                    <td>
+                        <a href="{{url_for('main.deleteLibro',id=book.id)}}"><button class="btn btn-danger">Eliminar</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+</div>
+
+
+
+{% endblock %}
