@@ -1,3 +1,4 @@
+#Importación de modulos 
 from flask import Flask,redirect,url_for,render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
@@ -14,11 +15,11 @@ def create_app():
 
     db.init_app(app)
 
-    # blueprint for auth routes in our app
+    # blueprint para rutass auth en nuestra app
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint)
 
-    # blueprint for non-auth parts of app
+    # blueprint para rutas auth en nuestra app
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
@@ -29,6 +30,7 @@ def create_app():
         login_manager = LoginManager()
         login_manager.login_view = 'auth.login'
         login_manager.init_app(app)
+        
         try:
             user = User.query.filter_by(email='admin@admin.com').first()
             if not user:
@@ -43,7 +45,6 @@ def create_app():
         
         @login_manager.user_loader
         def load_user(user_id):
-            # since the user_id is just the primary key of our user table, use it in the query for the user
             return User.query.get(int(user_id))
 
     return app
