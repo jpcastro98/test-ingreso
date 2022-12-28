@@ -7,7 +7,7 @@ body {
     min-height: 80vh;
     display: flex;
     flex-flow: row;
-
+    margin-top: 25px;
     justify-content: center;
     align-items: center;
 
